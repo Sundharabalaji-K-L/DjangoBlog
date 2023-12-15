@@ -8,6 +8,7 @@ class PostListView(ListView):
     context_object_name = 'posts'
     template_name = 'blog/home.html'
     ordering = ['-posted_date']
+    paginate_by = 5
 
 def about(request):
     return render(request, 'blog/about.html', {'tittle': 'About'})
